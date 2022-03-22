@@ -1,0 +1,22 @@
+{
+  "name": "gutenberg-page-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gutenberg-page-list.js",
+  "scripts": {
+    "build": "wp-scripts build src/index.js",
+    "start": "wp-scripts start src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tahir-asadov/gutenberg-page-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tahir-asadov/gutenberg-page-list/issues"
+  },
+  "homepage": "https://github.com/tahir-asadov/gutenberg-page-list#readme"
+}

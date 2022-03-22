@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;EAEE;EACA;AAAF;AAEE;EACE;AAAJ;AAGE;EACE;AADJ,C","sources":["webpack://gutenberg-page-list/./src/index.scss"],"sourcesContent":[".page-list {\n  \n  padding: 20px;\n  background-color: #fafafa;\n  \n  .mark-as-correct {\n    color: #ffd700;\n  }\n\n  .delete {\n    color: red;\n  }\n\n\n}"],"names":[],"sourceRoot":""}
