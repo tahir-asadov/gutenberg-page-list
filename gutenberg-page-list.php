@@ -3,7 +3,7 @@
 /*
   Plugin Name: Gutenberg Page List
   Description: List of pages
-  Version: 1.0
+  Version: 0.1
   Author: Tahir Asadli
   Author URI: https://tahir-asadov.github.io
   Text Domain: gutenberg-page-list
@@ -16,8 +16,8 @@ class GutenbergPageList
 
   public function __construct()
   {
-    add_action('wp_enqueue_scripts', [$this, 'register_assets']);
-    add_action('wp_enqueue_scripts', [$this, 'register_block']);
+    add_action('admin_enqueue_scripts', [$this, 'register_assets']);
+    add_action('init', [$this, 'register_block']);
     add_action('admin_menu', [$this, 'register_settings_page']);
   }
 
@@ -55,7 +55,6 @@ class GutenbergPageList
 
   public function render($attributes)
   {
-    wp_enqueue_style('gutenberg-page-list-front-css', plugin_dir_url(__FILE__).'build/frontend.css' );
     
     ob_start(); ?>
       <div class="gutenberg-page-list-front">
