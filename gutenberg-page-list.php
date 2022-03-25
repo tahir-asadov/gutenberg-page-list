@@ -16,8 +16,9 @@ class GutenbergPageList
 
   public function __construct()
   {
-    add_action('init', [$this, 'register_assets']);
-    add_action('init', [$this, 'register_settings_page']);
+    add_action('wp_enqueue_scripts', [$this, 'register_assets']);
+    add_action('wp_enqueue_scripts', [$this, 'register_block']);
+    add_action('admin_menu', [$this, 'register_settings_page']);
   }
 
   public function register_assets()
@@ -27,12 +28,16 @@ class GutenbergPageList
 
     wp_register_script('gutenberg-page-list', plugin_dir_url(__FILE__).'build/index.js', ['wp-blocks', 'wp-element', 'wp-editor']);
 
+  }
+
+  public function register_block()
+  {
+
     register_block_type('gutenberg-page-list/gutenberg-page-list', [
       'editor_script' => 'gutenberg-page-list',
       'editor_style' => 'gutenberg-page-list-css',
       'render_callback' => [$this, 'render']
     ]);
-
   }
 
   public function register_settings_page()
