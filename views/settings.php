@@ -41,7 +41,7 @@
 
     </div><!-- .page-list-container -->
 
-    <h2><?php echo __('Exclude pages', 'gutenberg-page-list'); ?></h2>
+    <h2><?php echo __('Excluded pages', 'gutenberg-page-list'); ?></h2>
 
     <div class="page-list-container">
 
