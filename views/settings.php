@@ -1,5 +1,5 @@
 <?php
-  $pages = get_pages();
+  $pages = get_pages(['post_status' => ['publish', 'draft']]);
   $included_pages = explode(',', get_option('gutenberg_page_list_included_pages'));
   $excluded_pages = explode(',', get_option('gutenberg_page_list_excluded_pages'));
 ?>
