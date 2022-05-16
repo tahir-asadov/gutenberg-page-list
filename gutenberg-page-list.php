@@ -3,7 +3,7 @@
 /*
   Plugin Name: Gutenberg Page List
   Description: List of pages
-  Version: 0.1
+  Version: 0.3.0
   Author: Tahir Asadli
   Author URI: https://tahir-asadov.github.io
   Text Domain: gutenberg-page-list
