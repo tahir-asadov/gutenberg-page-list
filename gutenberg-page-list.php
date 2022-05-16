@@ -60,7 +60,7 @@ class GutenbergPageList
       <div class="gutenberg-page-list-front">
         <?php wp_list_pages([
           'include' => get_option('gutenberg_page_list_included_pages'),
-          'exclude' => get_option('gutenberg_page_list_excluded_pages'),
+          // 'exclude' => get_option('gutenberg_page_list_excluded_pages'),
           'post_status' => 'publish'
         ]) ;?>
       </div>

@@ -41,35 +41,6 @@
 
     </div><!-- .page-list-container -->
 
-    <h2><?php echo __('Excluded pages', 'gutenberg-page-list'); ?></h2>
-
-    <div class="page-list-container">
-
-      <div class="page-list-container-top">
-        <select>
-          <option value=""><?php echo __('Select page to exclude', 'gutenberg-page-list'); ?></option>
-          <?php if($pages):?>
-            <?php foreach ($pages as $key => $value):?>
-              <option value="<?php echo $value->ID; ?>"><?php echo $value->post_title; ?></option>
-            <?php endforeach; ?>
-          <?php endif; ?>
-        </select>
-        <button class="button add_to_list"><?php echo __('Add to list', 'gutenberg-page-list'); ?></button>
-      </div><!-- .page-list-container-top -->
-
-      <div class="included-pages page-list">
-        <?php foreach ($pages as $key => $value):?>
-          <?php if(in_array($value->ID, $excluded_pages)):?>
-          <span id="<?php echo $value->ID; ?>"><?php echo $value->post_title; ?></span>
-          <?php endif;?>
-        <?php endforeach; ?>
-      </div><!-- .included-pages -->
-
-    
-      <input type="hidden" class="list" name="gutenberg_page_list_excluded_pages" value="<?php echo get_option('gutenberg_page_list_excluded_pages'); ?>">
-
-    </div><!-- .page-list-container -->
-
     <?php submit_button(); ?>
   </form>
 </div><!-- .wrap -->
